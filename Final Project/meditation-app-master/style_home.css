@@ -1,0 +1,27 @@
+html {
+    color: -internal-root-color;
+}
+
+body {
+    background-image: url('/free-soothing-desktop-wallpaper_4023930.jpg') ;
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+    
+#logo {
+    background-color: blue;
+    opacity: 0.2;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+header {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+header div {
+    display: block;
+}
+
