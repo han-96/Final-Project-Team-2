@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiescence</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div id="soothing music">
+        <a href="#section-1" style="border: none;display: inline-block" target="_top">Nhạc nhẹ</a>
+    </div>
+    <section id="section-1">
+        <div>
+            <button onclick="classic()" style="border:none">Cổ Điển</button>
+            <div id="class-music" style="display: none;">
+                <button onclick="instumental()"><audio id="Chopin-music" src="Chopin.m4a"></audio>Nhạc cụ</button>
+                <button>Bản nhạc</button>
+            </div>
+
+        </div>
+        <div>
+            <button onclick="nature()" style="border: none;"> Tiếng thiên nhiên</button>
+            <div id="nature-voice" style="display:none">
+                <button data-sound="" data-image="">Sóng vỗ</button>
+                <button data-sound="" data-image="">Chim hót</button>
+                <button data-sound="" data-image="">Tiếng mưa</button>
+            </div>
+        </div>
+    </section>
+    <section id="section-2">
+        <div>
+            <img src="avatar.jpg" style="width: 150px;border-radius:40%">
+            <h4>Đoàn Huy Tuấn</h4>
+            Là thành viên trẻ tuổi nhất của Team-2. Hiện tại mình đang là sinh viên chuyên ngành IT của Học viện Công
+            nghệ Bưu chính Viễn thông(PTIT). Sở thích là cầu lông, cà phê cà pháo với bạn bè. Em rất vinh dự được là một
+            phần của project lần này
+        </div>
+        <div>
+            <img src="ava-hang.jpg" style="width: 150px;border-radius:40%">
+            <h4>Vũ Thu Hằng</h4>
+            Là leader tài năng của nhóm với nhiều quyết định sáng suốt và chính xác. Dưới sự lãnh đạo của chị Hằng nhóm
+            đã nhanh chóng tìm được lối đi giữa con đường tăm tối mịt mù tìm ý tưởng cho project và thực hiện nó một
+            cách suôn sẻ nhất. Luôn nghiêm khắc và đốc thúc mọi người trong công việc, một leader rất tài ba =)))
+        </div>
+        <div>
+            <img src="ava-thao.jpg" style="width: 150px;border-radius:40%">
+            <h4>Phan Quang Thạo</h4>
+            Là anh đại giàu kinh nghiệm và trưởng thành nhất team-2. Anh Thạo đã rất cố gắng giúp đỡ các em
+        </div>
+        <audio id="Chopin" src="Chopin_ Nocturne No_20 In C-Sharp Minor_.m4a"></audio>
+    </section>
+</body>
+
+</html>
+<script src="app.js"></script>
