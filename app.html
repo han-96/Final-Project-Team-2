@@ -14,7 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/app-2.css">
-  <script src="js/app-2.js"></script>
+  
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -137,13 +137,13 @@ class="close" title="Close Modal">&times;</span>
             <h3 style="color: white;display: flex; justify-content: center;">Nature's Sounds</h3>
             <div class="musicpl" class="btn-group">
               <button type="button" class="btn btn-info"><i class="fas fa-pause-circle"></i></button>
-              <button onclick="chay()" type="button" class="btn btn-info"><i class="fas fa-play-circle"></i></button>
+              <button type="button" class="btn btn-info"><i class="fas fa-play-circle"></i></button>
               <button type="button" class="btn btn-info"><i class="fas fa-forward"></i></button>
             </div>
             <h3 style="color: white;display: flex; justify-content: center;">Classical music</h3>
             <div class="musicpl" class="btn-group">
-              <button type="button" class="btn btn-info"><i class="fas fa-pause-circle"></i></button>
-              <button type="button" class="btn btn-info"><i class="fas fa-play-circle"></i></button>
+              <button onclick="dung()" type="button" class="btn btn-info"><i class="fas fa-pause-circle"></i></button>
+              <button onclick="chay()" type="button" class="btn btn-info"><i class="fas fa-play-circle"></i></button>
               <button type="button" class="btn btn-info"><i class="fas fa-forward"></i></button>
             </div>
           </div>
@@ -156,44 +156,11 @@ class="close" title="Close Modal">&times;</span>
 
   <!-- Container (Services Section) -->
   <div id="services" class="container-fluid text-center">
-    <h2 style="color: black;">Breathing Exercises</h2>
-    <h4></h4>
-    <br>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-off logo-small"></span>
-        <h4>POWER</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-heart logo-small"></span>
-        <h4>LOVE</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-lock logo-small"></span>
-        <h4>JOB DONE</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
+    <h2 style="color: black;display: flex;justify-content: center;margin-left: 200px;">Expressing Zone</h2>
+    <div>
+      <textarea type="text" id="expression" row="3" cols="50"></textarea>
     </div>
-    <br><br>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-leaf logo-small"></span>
-        <h4>GREEN</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-certificate logo-small"></span>
-        <h4>CERTIFIED</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-wrench logo-small"></span>
-        <h4 style="color:#303030;">HARD WORK</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-    </div>
+    <button id="bt-save">Save your feelings here</button>
   </div>
 
   <!-- Container (Portfolio Section) -->
@@ -364,8 +331,8 @@ class="close" title="Close Modal">&times;</span>
     </a>
   </footer>
 
-<audio id="song1" src="Chopin.m4a"></audio>
-
+  <audio id="song1" src="Chopin.m4a"></audio>
+  <script src="js/app-2.js"></script>
 </body>
 
 </html>
