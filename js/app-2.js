@@ -1,7 +1,7 @@
 
-$(document).ready(function(){
+$(document).ready(function () {
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
@@ -14,26 +14,44 @@ $(document).ready(function(){
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
+      }, 900, function () {
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
+
+  $(window).scroll(function () {
+    $(".slideanim").each(function () {
       var pos = $(this).offset().top;
 
       var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
+      if (pos < winTop + 600) {
+        $(this).addClass("slide");
+      }
     });
   });
 })
+audio = document.getElementById('song1');
 function chay() {
   const audio = document.getElementById('song1');
   audio.play();
+}
+function dung() {
+  const audio = document.getElementById('song1');
+  audio.pause();
+}
+
+let saveButton = document.getElementById('bt-save')
+saveButton.onclick = () => {
+  let textContent = document.getElementById('expression').value
+  let encoded = 'data:application/octet-stream;base64,' + btoa(unescape(encodeURIComponent(textContent)))
+  let a = document.createElement('a')
+  a.href = encoded
+  a.download = 'expression.txt'
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  
 }
