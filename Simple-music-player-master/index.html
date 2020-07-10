@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple music player</title>
+    <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+    <img src="./assets/cover/108862.jpg" id="background" />
+    <audio src="./assets/music/Di Du Dua Di - Bich Phuong.mp3" id="song"></audio>
+
+    <div class="container">
+        <div class="box"></div>
+
+        <img src="./assets/cover/108862.jpg" alt="Di du dua di" id="thumbnail" />
+        <img src="./assets/icon/icons8-play-64.png" onclick="playPause()" id="play-pause" />
+        <img src="./assets/icon/icons8-backward-button-64.png" onclick="previousSong()" id="previous-song" />
+        <img src="./assets/icon/icons8-forward-64.png" onclick="nextSong()" id="next-song" />
+        
+        <div class="song-artist">Bích Phương</div>
+        <div class="song-title">Đi đu đưa đi</div>
+
+        <input type="range" id="progress-bar" min="0" max="" value="0" onchange="changeProgressBar()" />
+        <div class="currentTime"></div>
+        <div class="durationTime"></div>
+    </div>
+   
+    <script src="player.js"></script>
+</body>
+
+</html>
