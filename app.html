@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="css/style_frame.css" rel="stylesheet">
+  <link href="css/style_form.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/app-2.css">
@@ -24,37 +26,109 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
         </button>
-        <a class="navbar-brand" href="#myPage">Quiescence</a>
+        <a class="navbar-brand" id="logo" href="#myPage"><img src="images/logo.png" width="50%"></a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">Soothing Music </a></li>
-          <li><a href="#services">SERVICES</a></li>
-          <li><a href="#portfolio">PORTFOLIO</a></li>
-          <li><a href="#pricing">PRICING</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#soothening-sounds">Soothening Sounds</a></li>
+          <li><a href="#meditation">Meditation</a></li>
+          <li><a href="#expression-zone">Expression Zone</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><button type="button" class="btn btn-danger" id="loginBtn" onclick="document.getElementById('id01').style.display='block'">Đăng nhập</button></li>
+          <li><button type="button" class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'">Đăng ký</button></a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Sign up form -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+<form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Đăng ký</h1>
+      <p>Vui lòng nhập các thông tin dưới đây để hoàn tất đăng ký.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Mật khẩu</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ mật khẩu
+      </label>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancel2btn">Hủy</button>
+        <button type="submit" class="signupbtn">Đăng ký</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Ấn ra ngoài tắt popup -->
+<script>
+  var modal = document.getElementById('id02');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+<!-- Login form -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+<form class="modal-content animate" action="/action_page.php">
+  <div class="container">
+    <label for="uname"><b>Email</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Mật khẩu</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Đăng nhập</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button>
+    <span class="psw">Quên <a href="#">mật khẩu</a></span>
+  </div>
+</form>
+</div>
+
+<!-- Ấn ra ngoài tắt popup -->
+<script>
+  var modal = document.getElementById('id01');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
   <div class="jumbotron text-center">
     <h1>Quiescence</h1>
     <p>Nơi bạn thư giãn và thả lỏng tâm hồn</p>
-    <form>
-      <div class="input-group">
-        <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-danger">Subscribe</button>
-        </div>
-      </div>
-    </form>
   </div>
 
   <!-- Container (About Section) -->
-  <div id="about" class="container-fluid">
+  <div id="soothening-sounds" class="container-fluid">
     <h2>LISTEN TO BEAUTIFUL AND RELAXING MELODIES</h2>
     <div class="row">
       <div class="col-sm-8">
@@ -288,7 +362,6 @@
     <a href="#myPage" title="To Top">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
-    <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
   </footer>
 
 <audio id="song1" src="Chopin.m4a"></audio>

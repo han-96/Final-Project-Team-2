@@ -2,15 +2,13 @@ body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
-    width: 100%;
   }
   h2 {
     font-size: 24px;
     text-transform: uppercase;
-    color: white;
+    color: #303030;
     font-weight: 600;
     margin-bottom: 30px;
-    padding-right: 200px;
   }
   h4 {
     font-size: 19px;
@@ -108,9 +106,9 @@ body {
     background-color: #f4511e;
     color: #fff;
   }
-  /* .navbar {
+  .navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: transparent;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -120,7 +118,7 @@ body {
     font-family: Montserrat, sans-serif;
   }
   .navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
+    color: black !important;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #f4511e !important;
@@ -134,7 +132,7 @@ body {
     font-size: 20px;
     margin-bottom: 20px;
     color: #f4511e;
-  } */
+  }
   .slideanim {visibility:hidden;}
   .slide {
     animation-name: slide;
@@ -143,6 +141,13 @@ body {
     -webkit-animation-duration: 1s;
     visibility: visible;
   }
+
+  .btn-danger {
+    color: #fff;
+    background-color:rgba(128, 128, 128, 0.796);
+    border-color: #d43f3a;
+  }
+
   @keyframes slide {
     0% {
       opacity: 0;
@@ -178,25 +183,7 @@ body {
       font-size: 150px;
     }
   }
-  .row {
-    margin-right: -15px;
-    margin-left: -15px;
-    width: 100%;
-}
-#soothening-sounds{
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  height: 500px;
-  align-items: center;
-  padding-left: 390px;
-  background-image: url('../images/Soothing-bg-1.jpg');
-}
-#myPage{
 
-}
-.musicpl{
-  display: flex;
-  justify-content: center;
-  margin: 50px;
-}
+  #logo {
+    font-family: 
+  }
