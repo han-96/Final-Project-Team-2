@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Quiescence</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="css/style_frame.css" rel="stylesheet">
+  <link href="css/style_form.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/app-2.css">
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" id="logo" href="#myPage"><img src="images/logo.png" width="50%"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#soothening-sounds">Soothening Sounds</a></li>
+          <li><a href="#meditation">Meditation</a></li>
+          <li><a href="#expression-zone">Expression Zone</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><button type="button" class="btn btn-danger" id="loginBtn" onclick="document.getElementById('id01').style.display='block'">Đăng nhập</button></li>
+          <li><button type="button" class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'">Đăng ký</button></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sign up form -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+<form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Đăng ký</h1>
+      <p>Vui lòng nhập các thông tin dưới đây để hoàn tất đăng ký.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Mật khẩu</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ mật khẩu
+      </label>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancel2btn">Hủy</button>
+        <button type="submit" class="signupbtn">Đăng ký</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Ấn ra ngoài tắt popup -->
+<script>
+  var modal = document.getElementById('id02');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+<!-- Login form -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+<form class="modal-content animate" action="/action_page.php">
+  <div class="container">
+    <label for="uname"><b>Email</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Mật khẩu</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Đăng nhập</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button>
+    <span class="psw">Quên <a href="#">mật khẩu</a></span>
+  </div>
+</form>
+</div>
+
+<!-- Ấn ra ngoài tắt popup -->
+<script>
+  var modal = document.getElementById('id01');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+  <div class="jumbotron text-center">
+    <h1>Quiescence</h1>
+    <p>Nơi bạn thư giãn và thả lỏng tâm hồn</p>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div id="soothening-sounds" class="container-fluid">
+    <h2>LISTEN TO BEAUTIFUL AND RELAXING MELODIES</h2>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="container">
+          <div>
+            <h3 style="color: white;display: flex; justify-content: center;">Nature's Sounds</h3>
+            <div class="musicpl" class="btn-group">
+              <button type="button" class="btn btn-info"><i class="fas fa-pause-circle"></i></button>
+              <button type="button" class="btn btn-info"><i class="fas fa-play-circle"></i></button>
+              <button type="button" class="btn btn-info"><i class="fas fa-forward"></i></button>
+            </div>
+            <h3 style="color: white;display: flex; justify-content: center;">Classical music</h3>
+            <div class="musicpl" class="btn-group">
+              <button onclick="dung()" type="button" class="btn btn-info"><i class="fas fa-pause-circle"></i></button>
+              <button onclick="chay()" type="button" class="btn btn-info"><i class="fas fa-play-circle"></i></button>
+              <button type="button" class="btn btn-info"><i class="fas fa-forward"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Container (Services Section) -->
+  <div id="services" class="container-fluid text-center">
+    <h2 style="color: black;display: flex;justify-content: center;margin-left: 200px;">Expressing Zone</h2>
+    <div>
+      <textarea type="text" id="expression" row="3" cols="50"></textarea>
+    </div>
+    <button id="bt-save">Save your feelings here</button>
+  </div>
+
+  <!-- Container (Portfolio Section) -->
+  <div id="portfolio" class="container-fluid text-center bg-grey">
+    <h2>Portfolio</h2><br>
+    <h4>What we have created</h4>
+    <div class="row text-center slideanim">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="paris.jpg" alt="Paris" width="400" height="300">
+          <p><strong>Paris</strong></p>
+          <p>Yes, we built Paris</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="newyork.jpg" alt="New York" width="400" height="300">
+          <p><strong>New York</strong></p>
+          <p>We built New York</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
+          <p><strong>San Francisco</strong></p>
+          <p>Yes, San Fran is ours</p>
+        </div>
+      </div>
+    </div><br>
+
+    <h2>What our customers say</h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment
+              Box</span></h4>
+        </div>
+        <div class="item">
+          <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+        </div>
+        <div class="item">
+          <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Container (Pricing Section) -->
+  <div id="pricing" class="container-fluid">
+    <div class="text-center">
+      <h2>Pricing</h2>
+      <h4>Choose a payment plan that works for you</h4>
+    </div>
+    <div class="row slideanim">
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Đoàn Huy Tuấn</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>20</strong> Lorem</p>
+            <p><strong>15</strong> Ipsum</p>
+            <p><strong>5</strong> Dolor</p>
+            <p><strong>2</strong> Sit</p>
+            <p><strong>Endless</strong> Amet</p>
+          </div>
+          <div class="panel-footer">
+            <h3>$19</h3>
+            <h4>per month</h4>
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Vũ Thu Hằng</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>50</strong> Lorem</p>
+            <p><strong>25</strong> Ipsum</p>
+            <p><strong>10</strong> Dolor</p>
+            <p><strong>5</strong> Sit</p>
+            <p><strong>Endless</strong> Amet</p>
+          </div>
+          <div class="panel-footer">
+            <h3>$29</h3>
+            <h4>per month</h4>
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Premium</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>100</strong> Lorem</p>
+            <p><strong>50</strong> Ipsum</p>
+            <p><strong>25</strong> Dolor</p>
+            <p><strong>10</strong> Sit</p>
+            <p><strong>Endless</strong> Amet</p>
+          </div>
+          <div class="panel-footer">
+            <h3>$49</h3>
+            <h4>per month</h4>
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image of location/map -->
+  <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+  </footer>
+
+  <audio id="song1" src="Chopin.m4a"></audio>
+  <script src="js/app-2.js"></script>
+</body>
+
+</html>
