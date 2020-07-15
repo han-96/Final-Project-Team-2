@@ -19,11 +19,14 @@ body {
   }  
   .jumbotron {
     background: url("../images/Background-1.jpg") no-repeat;
-    background-size: cover;
+    background-size: contain;
     color: black;
-    padding: 250px 25px;
-    font-family: Montserrat, sans-serif;
+    padding: 250px 0px 250px 0px;
+    font-family: Montserrat, sans-serif; 
+    background-position: center;
+    background-color: rgba(138, 138, 138, 0.177);
   }
+  
   .container-fluid {
     padding: 60px 50px;
   }
@@ -108,7 +111,7 @@ body {
   }
   .navbar {
     margin-bottom: 0;
-    background-color: transparent;
+    background-color: rgba(223, 216, 216, 0.462);
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -122,7 +125,6 @@ body {
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #f4511e !important;
-    background-color: #fff !important;
   }
   .navbar-default .navbar-toggle {
     border-color: transparent;
