@@ -21,13 +21,14 @@ body {
     font-weight: 400;
     margin-bottom: 30px;
   }  
-  .jumbotron {
+  /* .jumbotron {
     background: url("../images/Background-1.jpg") no-repeat;
     background-size: contain;
     color: black;
     font-family: Montserrat, sans-serif;
     background-position: center;
-  }
+  } */
+
   .container-fluid {
     padding: 60px 50px;
     height: 700px;

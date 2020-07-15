@@ -10,11 +10,23 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="css/style_frame.css" rel="stylesheet">
   <link href="css/style_form.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/app-2.css">
 
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -35,81 +47,42 @@
           <li><a href="#meditation">Meditation</a></li>
           <li><a href="#expression-zone">Expression Zone</a></li>
           <li><a href="#about">About us</a></li>
-          <li><button type="button" class="btn btn-danger" id="loginBtn"
+          <li><button type="button" class="btn btn-danger" id="loginBtn login-Btn"
               onclick="document.getElementById('id01').style.display='block'">Đăng nhập</button></li>
-          <li><button type="button" class="btn btn-danger"
-              onclick="document.getElementById('id02').style.display='block'">Đăng ký</button></a></li>
+          <!-- <li><button type="button" class="btn btn-danger"
+              onclick="document.getElementById('id02').style.display='block'">Đăng ký</button></a></li> -->
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Sign up form -->
-  <div id="id02" class="modal">
-    <span onclick="document.getElementById('id02').style.display='none'" class="close"
-      title="Close Modal">&times;</span>
-
-    <form class="modal-content animate" action="/action_page.php">
-      <form class="modal-content" action="/action_page.php">
-        <div class="container">
-          <h1>Đăng ký</h1>
-          <p>Vui lòng nhập các thông tin dưới đây để hoàn tất đăng ký.</p>
-          <hr>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-
-          <label for="psw"><b>Mật khẩu</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ mật khẩu
-          </label>
-
-          <div class="clearfix">
-            <button type="button" onclick="document.getElementById('id02').style.display='none'"
-              class="cancel2btn">Hủy</button>
-            <button type="submit" class="signupbtn">Đăng ký</button>
-          </div>
-        </div>
-      </form>
-  </div>
-
-  <!-- Ấn ra ngoài tắt popup -->
-  <script>
-    var modal = document.getElementById('id02');
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-
 
   <!-- Login form -->
   <div id="id01" class="modal">
     <span onclick="document.getElementById('id01').style.display='none'" class="close"
       title="Close Modal">&times;</span>
 
-    <form class="modal-content animate" action="/action_page.php">
-      <div class="container">
+    <form class="modal-content animate">
+      <div class="container" id="loginFormContainer"">
+        <div class="alert alert-danger" role="alert" id="loginErrorAlert">
+        </div>
         <label for="uname"><b>Email</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" placeholder="Enter Username" name="uname" id="loginForm-email" required>
 
         <label for="psw"><b>Mật khẩu</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="psw" id="loginForm-password" required>
 
-        <button type="submit">Đăng nhập</button>
+        <button type="submit" class="button-submit" onclick="login()">Đăng nhập</button>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
         </label>
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
+        
         <button type="button" onclick="document.getElementById('id01').style.display='none'"
           class="cancelbtn">Hủy</button>
+        <button type="button" class="movetosignupformbtn"
+              onclick="document.getElementById('id02').style.display='block'">Bạn chưa có tài khoản, bấm vào đây để đăng ký</button></a>
         <span class="psw">Quên <a href="#">mật khẩu</a></span>
       </div>
     </form>
@@ -124,6 +97,53 @@
       }
     }
   </script>
+
+    <!-- Sign up form -->
+    <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+  
+      <form class="modal-content animate">
+        <form class="modal-content">
+          <div class="container" id="registerFormContainer">
+            <div class="alert alert-danger" role="alert"  id="registerErrorAlert"></div>
+            <h1>Đăng ký</h1>
+            <p>Vui lòng nhập các thông tin dưới đây để hoàn tất đăng ký.</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="registerForm-email" required>
+  
+            <label for="psw"><b>Mật khẩu</b></label>
+            <input type="password" placeholder="Enter Password" id="registerForm-password" name="psw" required>
+  
+            <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+  
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ mật khẩu
+            </label>
+  
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                class="cancel2btn">Hủy</button>
+              <button type="submit" class="signupbtn button-submit" onclick="register()">Đăng ký</button>
+            </div>
+          </div>
+        </form>
+    </div>
+  
+    <!-- Ấn ra ngoài tắt popup -->
+    <script>
+      var modal = document.getElementById('id02');
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+  
+  <!-- Chức năng sign in sign out -->
+
 
   <div class="jumbotron text-center">
     <h1>Quiescence</h1>
