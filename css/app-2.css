@@ -23,7 +23,7 @@ body {
   }  
   .jumbotron {
     background: url("../images/Background-1.jpg") no-repeat;
-    background-size: cover;
+    background-size: conatain;
     color: black;
     padding: 250px 25px;
     font-family: Montserrat, sans-serif;
