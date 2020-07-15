@@ -27,7 +27,7 @@ body {
     color: black;
     padding: 250px 25px;
     font-family: Montserrat, sans-serif;
-    height: 500px;
+
   }
   .container-fluid {
     padding: 60px 50px;
@@ -207,6 +207,7 @@ body {
 }
 #expression {
   width: 100%;
+
 }
 #services {
   height: 500px;
@@ -215,4 +216,5 @@ body {
 .breathing {
   display: flex;
   justify-content: center;
+
 }
