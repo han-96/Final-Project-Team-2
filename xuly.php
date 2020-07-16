@@ -1,7 +1,7 @@
 <?php
  
     // Nếu không phải là sự kiện đăng ký thì không xử lý
-    if (!isset($_POST['email'])){
+    if (!isset($_POST['txtUsername'])){
         die('');
     }
      
@@ -12,14 +12,15 @@
     header('Content-Type: text/html; charset=UTF-8');
           
     //Lấy dữ liệu từ file dangky.php
-    $password   = addslashes($_POST['psw']);
-    $email      = addslashes($_POST['email']);
-    $fullname   = addslashes($_POST['full-name']);
-    $birthday   = addslashes($_POST['birth-day']);
-    $sex        = addslashes($_POST['sex']);
+    $username   = addslashes($_POST['txtUsername']);
+    $password   = addslashes($_POST['txtPassword']);
+    $email      = addslashes($_POST['txtEmail']);
+    $fullname   = addslashes($_POST['txtFullname']);
+    $birthday   = addslashes($_POST['txtBirthday']);
+    $sex        = addslashes($_POST['txtSex']);
           
     //Kiểm tra người dùng đã nhập liệu đầy đủ chưa
-    if (!$password || !$email || !$fullname || !$birthday || !$sex)
+    if (!$username || !$password || !$email || !$fullname || !$birthday || !$sex)
     {
         echo "Vui lòng nhập đầy đủ thông tin. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
@@ -27,6 +28,17 @@
           
         // Mã khóa mật khẩu
         $password = md5($password);
+
+    if (mysql_num_rows(mysql_query("SELECT username FROM member WHERE username='$username'")) > 0){
+        echo "Tên đăng nhập này đã có người dùng. Vui lòng chọn tên đăng nhập khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
+
+    //Kiểm tra tên đăng nhập này đã có người dùng chưa
+    if (mysql_num_rows(mysql_query("SELECT username FROM member WHERE username='$username'")) > 0){
+        echo "Tên đăng nhập này đã có người dùng. Vui lòng chọn tên đăng nhập khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
+        exit;
+    }
                    
     //Kiểm tra email có đúng định dạng hay không
     if (!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", $email))
@@ -50,7 +62,8 @@
           
     //Lưu thông tin thành viên vào bảng
     @$addmember = mysql_query("
-        INSERT INTO member (
+        INSERT INTO members (
+            username,
             password,
             email,
             fullname,
@@ -58,6 +71,7 @@
             sex
         )
         VALUE (
+            '{$username}',
             '{$password}',
             '{$email}',
             '{$fullname}',
