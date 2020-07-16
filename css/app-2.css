@@ -20,7 +20,16 @@ body {
     color: #303030;
     font-weight: 400;
     margin-bottom: 3fc0px;
-  }  
+  } 
+
+  /* .jumbotron {
+    background: url("../images/Background-1.jpg") no-repeat;
+    background-size: contain;
+    color: black;
+    font-family: Montserrat, sans-serif;
+    background-position: center;
+  } */
+
   .container-fluid {
     margin-top: 30px;
     padding: 60px 50px;
