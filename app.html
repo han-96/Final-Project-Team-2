@@ -66,15 +66,12 @@
         <div class="alert alert-danger" role="alert" id="loginErrorAlert">
         </div>
         <label for="uname"><b>Email</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" id="loginForm-email" required>
+        <input type="text" placeholder="Nhập Email" name="uname" id="loginForm-email" required>
 
         <label for="psw"><b>Mật khẩu</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="loginForm-password" required>
+        <input type="password" placeholder="Nhập mật khẩu" name="psw" id="loginForm-password" required>
 
-        <button type="submit" class="button-submit" onclick="login()">Đăng nhập</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
-        </label>
+        <button type="submit" class="button-submit">Đăng nhập</button>
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
@@ -83,7 +80,6 @@
           class="cancelbtn">Hủy</button>
         <button type="button" class="movetosignupformbtn"
               onclick="document.getElementById('id02').style.display='block'">Bạn chưa có tài khoản, bấm vào đây để đăng ký</button></a>
-        <span class="psw">Quên <a href="#">mật khẩu</a></span>
       </div>
     </form>
   </div>
@@ -104,32 +100,39 @@
         title="Close Modal">&times;</span>
   
       <form class="modal-content animate">
-        <form class="modal-content">
+        <form class="modal-content" action="/xuly.php" method="POST">
           <div class="container" id="registerFormContainer">
             <div class="alert alert-danger" role="alert"  id="registerErrorAlert"></div>
             <h1>Đăng ký</h1>
             <p>Vui lòng nhập các thông tin dưới đây để hoàn tất đăng ký.</p>
             <hr>
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="registerForm-email" required>
+            <input type="text" placeholder="Nhập Email" name="txtEmail" id="registerForm-email" required>
   
             <label for="psw"><b>Mật khẩu</b></label>
-            <input type="password" placeholder="Enter Password" id="registerForm-password" name="psw" required>
+            <input type="password" placeholder="Nhập mật khẩu" id="registerForm-password" name="psw" required>
   
-            <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <label for="full-name"><b>Họ và tên</b></label>
+            <input type="text" placeholder="Họ và tên" name="full-name" required>
   
-            <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ mật khẩu
-            </label>
+            <label for="birth-day"><b>Ngày sinh</b></label>
+            <input type="text" placeholder="Ngày sinh" name="birth-day" required>
+
+            <label for="sex"><b>Giới tính</b></label>
+            <select name="sex">
+              <option value=""></option>
+              <option value="Nam">Nam</option>
+              <option value="Nu">Nữ</option>
+            </select>
   
             <div class="clearfix">
               <button type="button" onclick="document.getElementById('id02').style.display='none'"
                 class="cancel2btn">Hủy</button>
-              <button type="submit" class="signupbtn button-submit" onclick="register()">Đăng ký</button>
+              <button type="submit" class="signupbtn button-submit">Đăng ký</button>
             </div>
           </div>
         </form>
+      </form>
     </div>
   
     <!-- Ấn ra ngoài tắt popup -->
@@ -340,7 +343,6 @@
   </footer>
 
   <audio id="song1" src="Chopin.m4a"></audio>
-  <script src="js/app-2.js"></script>
 </body>
 
 </html>
