@@ -19,8 +19,9 @@ body {
     line-height: 1.375em;
     color: #303030;
     font-weight: 400;
-    margin-bottom: 30px;
-  }  
+    margin-bottom: 3fc0px;
+  } 
+
   /* .jumbotron {
     background: url("../images/Background-1.jpg") no-repeat;
     background-size: contain;
@@ -30,6 +31,7 @@ body {
   } */
 
   .container-fluid {
+    margin-top: 30px;
     padding: 60px 50px;
     height: 700px;
   }
@@ -120,6 +122,8 @@ body {
     -webkit-animation-duration: 1s;
     visibility: visible;
   }
+
+  
   @keyframes slide {
     0% {
       opacity: 0;
@@ -143,7 +147,7 @@ body {
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
-      margin: 25px 0;
+      margin: 25px ;
     }
     .btn-lg {
       width: 100%;
@@ -180,6 +184,7 @@ body {
 }
 #expression {
   width: 100%;
+
 }
 #services {
   height: 500px;
@@ -189,4 +194,3 @@ body {
   display: flex;
   justify-content: center;
 }
-
