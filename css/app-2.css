@@ -174,9 +174,10 @@ body {
   width: 100%;
 
 }
-#services {
+#services-1 {
   height: 500px;
-  background-image: ur
+  background: url("../images/expr.jpg") no-repeat;
+  background-size: 100%;
 }
 .breathing {
   display: flex;
