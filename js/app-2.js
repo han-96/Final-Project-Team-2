@@ -34,15 +34,27 @@ $(document).ready(function () {
   });
 })
 audio = document.getElementById('song1');
+nature = document.getElementById('song2');
 function chay() {
   const audio = document.getElementById('song1');
+  const nature = document.getElementById('song2');
   audio.play();
+  nature.pause();
 }
 function dung() {
   const audio = document.getElementById('song1');
   audio.pause();
 }
-
+function bat() {
+  const nature = document.getElementById('song2');
+  const audio = document.getElementById('song1');
+  nature.play();
+  audio.pause();
+}
+function tat() {
+  const nature = document.getElementById('song2');
+  nature.pause();
+}
 let saveButton = document.getElementById('bt-save')
 saveButton.onclick = () => {
   let textContent = document.getElementById('expression').value
@@ -53,5 +65,4 @@ saveButton.onclick = () => {
   document.body.appendChild(a)
   a.click()
   document.body.removeChild(a)
-  
 }

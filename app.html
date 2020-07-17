@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/app-2.css">
-
+  
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -32,99 +32,13 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#soothening-sounds">Soothening Sounds</a></li>
-          <li><a href="#meditation">Meditation</a></li>
-          <li><a href="#expression-zone">Expression Zone</a></li>
-          <li><a href="#about">About us</a></li>
-          <li><button type="button" class="btn btn-danger" id="loginBtn"
-              onclick="document.getElementById('id01').style.display='block'">Đăng nhập</button></li>
-          <li><button type="button" class="btn btn-danger"
-              onclick="document.getElementById('id02').style.display='block'">Đăng ký</button></a></li>
+          <li><a href="#services-1">Expressing Zone</a></li>
+          <li><a href="#portfolio">Breathing Exercise</a></li>
+          <li><a href="#pricing">About us</a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Sign up form -->
-  <div id="id02" class="modal">
-    <span onclick="document.getElementById('id02').style.display='none'" class="close"
-      title="Close Modal">&times;</span>
-
-    <form class="modal-content animate" action="/action_page.php">
-      <form class="modal-content" action="/action_page.php">
-        <div class="container">
-          <h1>Đăng ký</h1>
-          <p>Vui lòng nhập các thông tin dưới đây để hoàn tất đăng ký.</p>
-          <hr>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-
-          <label for="psw"><b>Mật khẩu</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ mật khẩu
-          </label>
-
-          <div class="clearfix">
-            <button type="button" onclick="document.getElementById('id02').style.display='none'"
-              class="cancel2btn">Hủy</button>
-            <button type="submit" class="signupbtn">Đăng ký</button>
-          </div>
-        </div>
-      </form>
-  </div>
-
-  <!-- Ấn ra ngoài tắt popup -->
-  <script>
-    var modal = document.getElementById('id02');
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-
-
-  <!-- Login form -->
-  <div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-      title="Close Modal">&times;</span>
-
-    <form class="modal-content animate" action="/action_page.php">
-      <div class="container">
-        <label for="uname"><b>Email</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-
-        <label for="psw"><b>Mật khẩu</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit">Đăng nhập</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
-        </label>
-      </div>
-
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'"
-          class="cancelbtn">Hủy</button>
-        <span class="psw">Quên <a href="#">mật khẩu</a></span>
-      </div>
-    </form>
-  </div>
-
-  <!-- Ấn ra ngoài tắt popup -->
-  <script>
-    var modal = document.getElementById('id01');
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-
   <div class="jumbotron text-center">
     <h1>Quiescence</h1>
     <p>Nơi bạn thư giãn và thả lỏng tâm hồn</p>
@@ -139,11 +53,10 @@
           <div>
             <h3 style="color: #72bcd4;display: flex; justify-content: center;">Nature's Sounds</h3>
             <div class="musicpl" class="btn-group">
-              <button style="width: 50px;" type="button" class="btn btn-info"><i
+              <button onclick="tat()" style="width: 50px;" type="button" class="btn btn-info"><i
                   class="fas fa-pause-circle"></i></button>
-              <button style="width: 50px;" type="button" class="btn btn-info"><i
+              <button onclick="bat()" style="width: 50px;" type="button" class="btn btn-info"><i
                   class="fas fa-play-circle"></i></button>
-              <button style="width: 50px;" type="button" class="btn btn-info"><i class="fas fa-forward"></i></button>
             </div>
             <h3 style="color: #72bcd4;display: flex; justify-content: center;">Classical music</h3>
             <div class="musicpl" class="btn-group">
@@ -151,7 +64,6 @@
                   class="fas fa-pause-circle"></i></button>
               <button onclick="chay()" type="button" class="btn btn-info" style="width: 50px;"><i
                   class="fas fa-play-circle"></i></button>
-              <button type="button" class="btn btn-info" style="width: 50px;"><i class="fas fa-forward"></i></button>
             </div>
           </div>
 
@@ -165,145 +77,114 @@
   <div id="services-1" class="container-fluid text-center">
     <h2 style="color: black;display: flex;justify-content: center;margin-left: 200px;">Expressing Zone</h2>
     <div>
-      <textarea type="text" id="expression" row="3" cols="50"></textarea>
+      <textarea type="text" id="expression" row="8" cols="50"></textarea>
     </div>
     <button id="bt-save">Save your feelings here</button>
   </div>
 
   <!-- Container (Portfolio Section) -->
 
-  <div id="portfolio" class="container-fluid text-center bg-grey">
-    <div id="services" class="container-fluid text-center">
+  <div id="portfolio" class="container-fluid3 text-center">
+    <div id="services" class="container-fluid3 text-center">
       <h2 style="display: flex;justify-content: center;color: black;margin-left: 200px;">Breathing Exercise</h2>
       <br>
       <div class="breathing" class="row slideanim">
         <div class="col-sm-4">
-          <span class="glyphicon glyphicon-off logo-small"></span>
-          <h4>POWER</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+          <span><img src="images/breathing-step1.png" width="200px"></span>
+          <h4>STEP 1</h4>
         </div>
         <div class="col-sm-4">
-          <span class="glyphicon glyphicon-heart logo-small"></span>
-          <h4>LOVE</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+          <span><img src="images/breathing-step2.png" width="200px"></span>
+          <h4>STEP 2</h4>
         </div>
         <div class="col-sm-4">
-          <span class="glyphicon glyphicon-lock logo-small"></span>
-          <h4>JOB DONE</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+          <span> <img src="images/breathing-step3.png" width="200px"></span>
+          <h4>STEP 3</h4>
         </div>
       </div>
-      <br><br>
       <div class="breathing" class="row slideanim">
         <div class="col-sm-4">
-          <span class="glyphicon glyphicon-leaf logo-small"></span>
-          <h4>GREEN</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+          <span><img src="images/breathing-step4.png" width="200px"></span>
+          <h4>STEP 4</h4>
         </div>
         <div class="col-sm-4">
-          <span class="glyphicon glyphicon-certificate logo-small"></span>
-          <h4>CERTIFIED</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+          <span> <img src="images/breathing-step1.png" width="200px"></span>
+          <h4>STEP 5</h4>
         </div>
         <div class="col-sm-4">
-          <span class="glyphicon glyphicon-wrench logo-small"></span>
-          <h4 style="color:#303030;">HARD WORK</h4>
-          <p>Lorem ipsum dolor sit amet..</p>
+          <span><img src="images/breathing-step6.png" width="200px"></span>
+          <h4 style="color:#303030;">STEP 6</h4>
         </div>
       </div>
+      <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/04PgJqJGLQc" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
 
-  <!-- Container (Pricing Section) -->
-  <div id="pricing" class="container-fluid">
-    <div class="text-center">
-      <h1>
-        <storng>About us</storng>
-      </h1>
-    </div>
-    <div class="row slideanim">
-      <div class="col-sm-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h1 style="font-family: Frutinger;">Đoàn Huy Tuấn</h1>
-          </div>
-          <div class="panel-body">
-            <p><strong>Thành viên trẻ tuổi của nhóm, hiện vẫn còn đang là sinh viên miệt mài cày cuốc từng dòng code cơ
-                bản. Mặc dù vẫn còn phải bị hối thúc rất nhiều nhưng em rất vui khi được là một phần đóng góp cho sự
-                thành công của
-                team-2</strong></p>
-            <img src="avatar.jpg" width="100px" style="border-radius: 50%;">
-          </div>
-          <div class="panel-footer">
-            <button class="btn btn-lg">Facebook</button>
+    <!-- Container (Pricing Section) -->
+    <div id="pricing" class="container-fluid">
+      <div class="text-center">
+        <h1>
+          <storng>About us</storng>
+        </h1>
+      </div>
+      <div class="row slideanim">
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1 style="font-family: Frutinger;">Đoàn Huy Tuấn</h1>
+            </div>
+            <div class="panel-body">
+              <p><strong>Thành viên trẻ tuổi của nhóm, hiện vẫn còn đang là sinh viên miệt mài cày cuốc từng dòng code
+                  cơ
+                  bản. Mặc dù vẫn còn phải bị hối thúc rất nhiều nhưng em rất vui khi được là một phần đóng góp cho sự
+                  thành công của
+                  team-2</strong></p>
+              <img src="avatar.jpg" width="100px" style="border-radius: 50%;">
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn-lg">Facebook</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h1 style="font-family: Frutinger;">Team-2</h1>
-          </div>
-          <div class="panel-body">
-            Our motto<br>
-            CHẠY DEADLINE ĐI EM!
-            <img width="100px" width="100px" style="border-radius: 50%;" src="../images/team-2.jpg">
-          </div>
-          <div class="panel-footer">
-            <button class="btn btn-lg">Team-2 No.1</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h1 style="font-family: Frutinger;">Vũ Thu Hằng</h1>
-          </div>
-          <div class="panel-body">
-            <p><strong>Leader của team-2, chị Hẳng là một người lãnh đạo tài tình đã hướng cả team đi trên con đường
-                đúng đắn trong lúc đang bí idea nhất =)) Cũng là người đã hối thúc rất nhiều để cả team có thể kịp tiến
-                độ deadline như ngày hôm này</p></strong>
-            <img src="ava-hang.jpg" width="100px" style="border-radius: 50%;">
-          </div>
-          <div class="panel-footer">
-            <button class="btn btn-lg">Facebook</button>
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1 style="font-family: Frutinger;">Team-2</h1>
+            </div>
+            <div class="panel-body">
+              Phương châm của chúng tôi<br>
+              CHẠY DEADLINE ĐI EM!<br>
+              <img width="100px" width="100px" style="border-radius: 50%;" src="../images/team-2.jpg">
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn-lg">Team-2 No.1</button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Container (Contact Section) -->
-  <div id="contact" class="container-fluid bg-grey">
-    <h2 class="text-center">CONTACT</h2>
-    <div class="row">
-      <div class="col-sm-5">
-        <p>Contact us and we'll get back to you within 24 hours.</p>
-        <p><span class="glyphicon glyphicon-map-marker"></span> Hanoi, Vietnam</p>
-        <p><span class="glyphicon glyphicon-phone"></span> +00 123456789</p>
-        <p><span class="glyphicon glyphicon-envelope"></span> blablahaha@something.com</p>
-      </div>
-      <div class="col-sm-7 slideanim">
-        <div class="row">
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-          </div>
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-          </div>
-        </div>
-        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-        <div class="row">
-          <div class="col-sm-12 form-group">
-            <button class="btn btn-default pull-right" type="submit">Send</button>
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1 style="font-family: Frutinger;">Vũ Thu Hằng</h1>
+            </div>
+            <div class="panel-body">
+              <p><strong>Leader của team-2, chị Hẳng là một người lãnh đạo tài tình đã hướng cả team đi trên con đường
+                  đúng đắn trong lúc đang bí idea nhất =)) Cũng là người đã hối thúc rất nhiều để cả team có thể kịp
+                  tiến
+                  độ deadline như ngày hôm này</p></strong>
+              <img src="ava-hang.jpg" width="100px" style="border-radius: 50%;">
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn-lg">Facebook</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <audio id="song1" src="Chopin.m4a"></audio>
-  <script src="js/app-2.js"></script>
-  <audio id="song2" src=""></audio>
+    <audio id="song1" src="Chopin.m4a"></audio>
+    <audio id="song2" src="nature.mp3"></audio>
+    <script src="js/app-2.js"></script>
 </body>
 
 </html>
