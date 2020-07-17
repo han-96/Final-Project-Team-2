@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Quiescence - Way to relax</title>
+  <title>Quiescence</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -11,184 +11,178 @@
   <link href="css/style_form.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/app-2.css">
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" id="logo" href="#myPage"><img src="images/logo.png" width="50%"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">About us</a></li>
-        <li><a href="#soothening-sounds">Soothening Sounds</a></li>
-        <li><a href="#services-1">Meditation</a></li>
-        <li><a href="#expression-zone">Expression Zone</a></li>
-        <li><button type="button" class="btn btn-danger" onclick="document.getElementById('id01').style.display='block'">Đăng nhập</button></li>
-        <li><button type="button" class="btn btn-danger" onclick="document.getElementById('id02').style.display='block'">Đăng ký</button></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Sign up form -->
-<div id="id02" class="modal">
-  <span onclick="document.getElementById('id02').style.display='none'"
-class="close" title="Close Modal">&times;</span>
-
-<form class="modal-content animate" action="/action_page.php">
-  <form class="modal-content" action="/action_page.php">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <h1>Đăng ký</h1>
-      <p>Vui lòng nhập các thông tin dưới đây để hoàn tất đăng ký.</p>
-      <hr>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-
-      <label for="psw"><b>Mật khẩu</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ mật khẩu
-      </label>
-
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancel2btn">Hủy</button>
-        <button type="submit" class="signupbtn">Đăng ký</button>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="logo" href="#myPage"><img src="images/logo.png" width="35%"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#soothening-sounds">Soothening Sounds</a></li>
+          <li><a href="#services-1">Expressing Zone</a></li>
+          <li><a href="#portfolio">Breathing Exercise</a></li>
+          <li><a href="#pricing">About us</a></li>
+        </ul>
       </div>
     </div>
-  </form>
-</div>
-
-<!-- Ấn ra ngoài tắt popup -->
-<script>
-  var modal = document.getElementById('id02');
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
-
-
-<!-- Login form -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
-class="close" title="Close Modal">&times;</span>
-
-<form class="modal-content animate" action="/action_page.php">
-  <div class="container">
-    <label for="uname"><b>Email</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Mật khẩu</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit">Đăng nhập</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Ghi nhớ mật khẩu
-    </label>
+  </nav>
+  <div class="jumbotron text-center">
+    <h1>Quiescence</h1>
+    <p>Nơi bạn thư giãn và thả lỏng tâm hồn</p>
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button>
-    <span class="psw">Quên <a href="#">mật khẩu</a></span>
-  </div>
-</form>
-</div>
+  <!-- Container (About Section) -->
+  <div id="soothening-sounds" class="container-fluid">
+    <h2 style="color: black">LISTEN TO BEAUTIFUL AND RELAXING MELODIES</h2>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="container">
+          <div>
+            <h3 style="color: #72bcd4;display: flex; justify-content: center;">Nature's Sounds</h3>
+            <div class="musicpl" class="btn-group">
+              <button onclick="tat()" style="width: 50px;" type="button" class="btn btn-info"><i
+                  class="fas fa-pause-circle"></i></button>
+              <button onclick="bat()" style="width: 50px;" type="button" class="btn btn-info"><i
+                  class="fas fa-play-circle"></i></button>
+            </div>
+            <h3 style="color: #72bcd4;display: flex; justify-content: center;">Classical music</h3>
+            <div class="musicpl" class="btn-group">
+              <button onclick="dung()" type="button" class="btn btn-info" style="width: 50px;"><i
+                  class="fas fa-pause-circle"></i></button>
+              <button onclick="chay()" type="button" class="btn btn-info" style="width: 50px;"><i
+                  class="fas fa-play-circle"></i></button>
+            </div>
+          </div>
 
-<!-- Ấn ra ngoài tắt popup -->
-<script>
-  var modal = document.getElementById('id01');
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
-
-
-
-
-<!-- General information -->
-<div class="jumbotron text-center">
-  <h1>Quiescence</h1> 
-  <p>Together, we take a rest</p> 
-</div>
-
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>About Us</h2><br>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
   </div>
-</div>
-
-<!-- Container (soothening-sounds Section) -->
-<div id="soothening-sounds" class="container-fluid text-center">
-  <h2>Soothening Sounds</h2>
-</div>
-
-<!-- Container (meditation Section) -->
-<div id="meditation" class="container-fluid text-center bg-grey">
-  <h2>meditation</h2><br>
-</div>
-
-<!-- Container (expression-zone Section) -->
-<div id="expression-zone" class="container-fluid">
-  <div class="text-center">
-    <h2>Expression Zone</h2>
-  </div>   
   </div>
-</div>
 
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+  <!-- Container (Services Section) -->
+  <div id="services-1" class="container-fluid text-center">
+    <h2 style="color: black;display: flex;justify-content: center;margin-left: 200px;">Expressing Zone</h2>
+    <div>
+      <textarea type="text" id="expression" row="8" cols="50"></textarea>
+    </div>
+    <button id="bt-save">Save your feelings here</button>
+  </div>
 
-      // Store hash
-      var hash = this.hash;
+  <!-- Container (Portfolio Section) -->
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-  
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
+  <div id="portfolio" class="container-fluid3 text-center">
+    <div id="services" class="container-fluid3 text-center">
+      <h2 style="display: flex;justify-content: center;color: black;margin-left: 200px;">Breathing Exercise</h2>
+      <br>
+      <div class="breathing" class="row slideanim">
+        <div class="col-sm-4">
+          <span><img src="images/breathing-step1.png" width="200px"></span>
+          <h4>STEP 1</h4>
+        </div>
+        <div class="col-sm-4">
+          <span><img src="images/breathing-step2.png" width="200px"></span>
+          <h4>STEP 2</h4>
+        </div>
+        <div class="col-sm-4">
+          <span> <img src="images/breathing-step3.png" width="200px"></span>
+          <h4>STEP 3</h4>
+        </div>
+      </div>
+      <div class="breathing" class="row slideanim">
+        <div class="col-sm-4">
+          <span><img src="images/breathing-step4.png" width="200px"></span>
+          <h4>STEP 4</h4>
+        </div>
+        <div class="col-sm-4">
+          <span> <img src="images/breathing-step1.png" width="200px"></span>
+          <h4>STEP 5</h4>
+        </div>
+        <div class="col-sm-4">
+          <span><img src="images/breathing-step6.png" width="200px"></span>
+          <h4 style="color:#303030;">STEP 6</h4>
+        </div>
+      </div>
+      <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/04PgJqJGLQc" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
 
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-})
-</script>
-
+    <!-- Container (Pricing Section) -->
+    <div id="pricing" class="container-fluid">
+      <div class="text-center">
+        <h1>
+          <storng>About us</storng>
+        </h1>
+      </div>
+      <div class="row slideanim">
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1 style="font-family: Frutinger;">Đoàn Huy Tuấn</h1>
+            </div>
+            <div class="panel-body">
+              <p><strong>Thành viên trẻ tuổi của nhóm, hiện vẫn còn đang là sinh viên miệt mài cày cuốc từng dòng code
+                  cơ
+                  bản. Mặc dù vẫn còn phải bị hối thúc rất nhiều nhưng em rất vui khi được là một phần đóng góp cho sự
+                  thành công của
+                  team-2</strong></p>
+              <img src="avatar.jpg" width="100px" style="border-radius: 50%;">
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn-lg">Facebook</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1 style="font-family: Frutinger;">Team-2</h1>
+            </div>
+            <div class="panel-body">
+              Phương châm của chúng tôi<br>
+              CHẠY DEADLINE ĐI EM!<br>
+              <img width="100px" width="100px" style="border-radius: 50%;" src="../images/team-2.jpg">
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn-lg">Team-2 No.1</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1 style="font-family: Frutinger;">Vũ Thu Hằng</h1>
+            </div>
+            <div class="panel-body">
+              <p><strong>Leader của team-2, chị Hẳng là một người lãnh đạo tài tình đã hướng cả team đi trên con đường
+                  đúng đắn trong lúc đang bí idea nhất =)) Cũng là người đã hối thúc rất nhiều để cả team có thể kịp
+                  tiến
+                  độ deadline như ngày hôm này</p></strong>
+              <img src="ava-hang.jpg" width="100px" style="border-radius: 50%;">
+            </div>
+            <div class="panel-footer">
+              <button class="btn btn-lg">Facebook</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id="song1" src="Chopin.m4a"></audio>
+    <audio id="song2" src="nature.mp3"></audio>
+    <script src="js/app-2.js"></script>
 </body>
 </html>
