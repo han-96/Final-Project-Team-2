@@ -39,20 +39,24 @@ function chay() {
   const audio = document.getElementById('song1');
   const nature = document.getElementById('song2');
   audio.play();
+  nature.currentTime = 0;
   nature.pause();
 }
 function dung() {
   const audio = document.getElementById('song1');
+  nature.currentTime = 0;
   audio.pause();
 }
 function bat() {
   const nature = document.getElementById('song2');
   const audio = document.getElementById('song1');
   nature.play();
+  nature.currentTime = 0;
   audio.pause();
 }
 function tat() {
   const nature = document.getElementById('song2');
+  nature.currentTime = 0;
   nature.pause();
 }
 let saveButton = document.getElementById('bt-save')
